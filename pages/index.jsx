@@ -85,8 +85,6 @@ export default function Home({ projects }) {
                       </a>
                     </BtnContainer>
                   </ProjectText>
-
-                  
                 </Project>
               </>
               )
