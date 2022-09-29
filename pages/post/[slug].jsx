@@ -51,6 +51,7 @@ export async function getStaticPaths() {
 }
   
 export default function Post({ post }) {
+  console.log(post)
 return <>
     <div>
     <h2>{ post.title }</h2>
