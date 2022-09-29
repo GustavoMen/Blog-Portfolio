@@ -57,6 +57,7 @@ export const ProjectsCall = styled.h2`
   color: #fff;
   font-size: 32px;
   text-align: center;
+  margin-top: 40px;
 `;
 
 export const GifScroll = styled.img`
@@ -68,7 +69,7 @@ export const SectionTwo = styled.section`
   max-width: 100vw;
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 80px;
   margin-bottom: 50px;
 `;
 
