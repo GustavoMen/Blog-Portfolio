@@ -50,7 +50,7 @@ export default function Home({ projects }) {
           <SecundaryText>Desenvolvedor Full Stack</SecundaryText>
           <AboutText>Desenvolvedor Full Stack, com experiência de atuação como Desenvolvedor Freelancer para projetos voltados ao ambiente Web.</AboutText>
           <ProjectsCall>Veja com o que andei trabalhando.</ProjectsCall>
-          <GifScroll src="./scrolldown.gif"></GifScroll>
+          <GifScroll src="./scrollDown.gif"></GifScroll>
         </ContainerText>
       </SectionOne>
 
