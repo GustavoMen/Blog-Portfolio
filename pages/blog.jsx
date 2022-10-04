@@ -41,7 +41,7 @@ export default function Blog({ posts }) {
 return (
     <>
         <SectionOne>
-            <DivImage src='./blogimage.png'></DivImage>
+            <DivImage src='./blogImage.png'></DivImage>
             <DivText>
                 <Title>Um blog feito de Dev para Dev, com intuito de compartilhar informações</Title>
                 <MainText>Veja alguns Posts abaixo.</MainText>
