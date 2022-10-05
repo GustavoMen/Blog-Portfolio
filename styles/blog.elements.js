@@ -5,10 +5,21 @@ export const SectionOne = styled.section`
   display: grid;
   grid-template-columns: 40vw 50vw;
   grid-gap: 5vw;
+
+  @media screen and (max-width: 978px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } ;
 `;
 
 export const DivImage = styled.img`
-  width: 500px;
+  width: 100%;
+
+  @media screen and (max-width: 978px) {
+    width: 60%;
+    margin-right: 90px;
+  } ;
 `;
 
 export const DivText = styled.div`
@@ -51,6 +62,13 @@ export const PostContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: space-around;
+
+  @media screen and (max-width: 789px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 468px) {
+    grid-template-columns: 1fr;
+  } ;
 `;
 
 export const DivTitle = styled.h2`
@@ -81,7 +99,7 @@ export const PostImg = styled.img`
 
 export const BtnContact = styled.button`
   height: 40px;
-  width: 130px;
+  width: 90%;
   border: 2px solid #fff;
   border-radius: 5px;
   background: none;

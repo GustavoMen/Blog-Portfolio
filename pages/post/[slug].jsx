@@ -1,4 +1,5 @@
 import { GraphQLClient, gql } from "graphql-request"
+import { Section, ContainerPost, PostTitle, PostImage, PostAuthor, DivContent } from "../../styles/dynamicPost.elements"
 
 const hygraph = new GraphQLClient(
   'https://api-sa-east-1.hygraph.com/v2/cl8kkc90t1vjv01ulbzw4a0pj/master'
@@ -16,6 +17,9 @@ query Post($slug: String!) {
     content {
       html
     }
+    coverPhoto {
+        url
+        }
   }
 }
 `
@@ -51,11 +55,15 @@ export async function getStaticPaths() {
 }
   
 export default function Post({ post }) {
-  console.log(post)
-return <>
-    <div>
-    <h2>{ post.title }</h2>
-    </div>
-    <div>Individual post content</div>
-</>
+  
+  return<>
+    <Section>
+      <ContainerPost>
+        <PostTitle>{post.title}</PostTitle>
+        <PostAuthor>por: {post.author.name}</PostAuthor>
+        <PostImage src={post.coverPhoto.url}></PostImage>
+        <DivContent dangerouslySetInnerHTML={{ __html: post.content.html }} />
+      </ContainerPost>
+    </Section>
+  </>
 }

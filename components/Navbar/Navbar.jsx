@@ -43,10 +43,6 @@ const Navbar = () => {
             <Link href="/" >
               <a onClick={closeMobileMenu}><NavIcon /></a>
             </Link>
-            <Link href="/">
-              <a onClick={closeMobileMenu}>GMendonça</a>
-            </Link>
-            
           </NavLogo>
           <MobileIcon onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
