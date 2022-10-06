@@ -1,6 +1,10 @@
 import Head from "next/head";
 import { GraphQLClient, gql } from 'graphql-request';
-import { SectionOne, ContainerText, FristText, MainText, SecundaryText, AboutText, GifScroll, ProjectsCall, SectionTwo, ContainerProject, Project, ProjectImg, ProjectName, ProjectDescription, ProjectText, TextWarning, BtnContact, BtnContainer} from '../styles/index.elements'
+import { SectionOne, ContainerText, FristText, MainText, SecundaryText, AboutText, GifScroll, ProjectsCall, SectionTwo, ContainerProject, Project, ProjectImg, ProjectName, ProjectDescription, ProjectText, TextWarning, BtnContact, BtnContainer } from '../styles/index.elements'
+import Aos from "aos";
+import { useEffect } from "react";
+
+
 
 const hygraph = new GraphQLClient(
   'https://api-sa-east-1.hygraph.com/v2/cl8kkc90t1vjv01ulbzw4a0pj/master'
@@ -32,9 +36,16 @@ export async function getStaticProps() {
   }
 }
 
+ 
+
 export default function Home({ projects }) {
 
-  console.log(projects)
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <>
       <Head>
@@ -43,7 +54,7 @@ export default function Home({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <SectionOne>
+      <SectionOne data-aos="fade-right">
         <ContainerText>
           <FristText>Ola mundo, meu nome é</FristText>
           <MainText>Gustavo Mendonça</MainText>
