@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  width: 100vw;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
 export const ContainerPost = styled.div`
-  width: 90vw;
+  width: 70vw;
   display: flex;
   flex-direction: column;
 `;
